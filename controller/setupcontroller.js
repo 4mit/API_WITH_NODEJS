@@ -8,7 +8,8 @@ module.exports = function(server , restify , plugins  , restifyValidator){
     server.use(plugins.authorizationParser());
     server.use(function(req,res,next){
          /*
-            ip whitelisting additional 
+            ip whitelisting additional  Implementatin 
+            
             var IpList = ['111.111.222.111'];
             var Ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
             if(IpList.indexOf(ip)==-1){
@@ -28,6 +29,9 @@ module.exports = function(server , restify , plugins  , restifyValidator){
             //X-Forwarded-For
         */
     });
+    
+    //Handles Request with API key 
+    
     server.use(function(req,res,next){
         var apiKeys = {
             'user1': 'fdfdfdfdfergfgfg'
