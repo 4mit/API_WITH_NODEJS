@@ -1,0 +1,18 @@
+{
+  "name": "nodeapi",
+  "version": "1.0.0",
+  "description": "my nodeapi",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "mongoose": "^4.12.5",
+    "mpromise": "^0.5.5",
+    "restify": "^6.2.3",
+    "restify-validator": "^0.3.1"
+  }
+}
