@@ -5,7 +5,7 @@
  // 
  module.exports = function(server){
     server.get("/",function(req,res,next){
-        UserModel.find({},function(err,users){
+        UserModel.find({},function(err,users){                 // find() is a Mongodb Function .
             helper.success(res,next,users);
         });
     });
@@ -16,7 +16,7 @@
         if(errors){
             helper.failure(res , next , errors[0],400);
         }
-        UserModel.findOne({_id : req.params.id},function(err,user){
+        UserModel.findOne({_id : req.params.id},function(err,user){    // findOne is a mongoDb function 
             if(err){
                 helper.failure(res , next , 'Cant fetch database .. ', 50);
             }
