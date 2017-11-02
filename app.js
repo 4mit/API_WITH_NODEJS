@@ -11,6 +11,6 @@
  setupcontroller(server , restify , plugins , restifyValidator);
  userController(server);
 
- server.listen(8080  , function(){
+ server.listen(8080  , function(){              //Starting the server 
      console.log('%s Listening at %s', server.name  , server.url);
  });
